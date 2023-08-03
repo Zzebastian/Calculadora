@@ -13,5 +13,9 @@ botonesNro = [{'texto': '0', 'fg': 'black', 'funcion': lambda:funciones.colocarN
         {'texto': '7', 'fg': 'black', 'funcion': lambda:funciones.colocarNumero(7),'col': 1, 'fila': 1, 'tf': 1, 'tc': 1},
         {'texto': '8', 'fg': 'black', 'funcion': lambda:funciones.colocarNumero(8),'col': 2, 'fila': 1, 'tf': 1, 'tc': 1},
         {'texto': '9', 'fg': 'black', 'funcion': lambda:funciones.colocarNumero(9),'col': 3, 'fila': 1, 'tf': 1, 'tc': 1},
+        {'texto': '+', 'fg': 'black', 'funcion': lambda:funciones.sumar(),'col': 4, 'fila': 1, 'tf': 1, 'tc': 1},
+        {'texto': '-', 'fg': 'black', 'funcion': lambda:funciones.restar(),'col': 4, 'fila': 2, 'tf': 1, 'tc': 1},
+        {'texto': 'x', 'fg': 'black', 'funcion': lambda:funciones.multiplicar(),'col': 4, 'fila': 3, 'tf': 1, 'tc': 1},
+        {'texto': '/', 'fg': 'black', 'funcion': lambda:funciones.dividir(),'col': 4, 'fila': 4, 'tf': 1, 'tc': 1},
+        {'texto': '=', 'fg': 'black', 'funcion': lambda:funciones.igual(),'col': 3, 'fila': 4, 'tf': 1, 'tc': 1},
 ]
-

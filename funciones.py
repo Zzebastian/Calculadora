@@ -1,5 +1,7 @@
+
 def colocarNumero(numero):
     print(numero)
+    
 # 
 def sumar():
     print('sumar')
