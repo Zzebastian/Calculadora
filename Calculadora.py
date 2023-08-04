@@ -2,8 +2,10 @@ import os
 import tkinter as tk
 from tkinter import ttk
 import tkinter.font as tkFont
-
-os.system('cls')
+try:
+    os.system('clear')
+except:
+    os.system('cls')
 
 def borrar():
     global primerNumero, segundoNumero, evitarSuperposicion, tareaprevia
@@ -43,17 +45,15 @@ def operacion(tarea):
             primerNumero = 0
         
         tareaprevia = tarea
-        print('1')
     else:
         segundoNumero = int(entrada.get('1.0', 'end'))
-        tareaprevia = tarea
-        print('2')
+
     
     evitarSuperposicion = True   
 #
 def accion(tareaprevia):
     global primerNumero, segundoNumero
-    print(primerNumero, segundoNumero, tareaprevia)##### Continuar acá cuando decida las tareaprevias
+
     if tareaprevia == 'sumar':
         primerNumero += segundoNumero
     elif tareaprevia == 'restar':
@@ -67,8 +67,6 @@ def accion(tareaprevia):
     entrada.insert(tk.END, primerNumero)
 
 #
-
-
 
 botonesNro = [{'texto': '0', 'funcion': lambda: colocarNumero(0),'col': 2, 'fila': 4, 'tf': 1, 'tc': 1},
         {'texto': '1', 'funcion': lambda: colocarNumero(1),'col': 1, 'fila': 3, 'tf': 1, 'tc': 1},
@@ -89,13 +87,11 @@ botonesNro = [{'texto': '0', 'funcion': lambda: colocarNumero(0),'col': 2, 'fila
 ]
 
 
-
-
 calculadora = tk.Tk()
 calculadora.title('Calculadora Básica')
 calculadora.geometry('350x200')
 
-# Inicialización Filas y Columnas por si eventualmente se desea mover el conjunto
+# Inicializa Filas y Columnas por si eventualmente se desea mover el conjunto
 i = 0 # Columnas
 j = 0 # Filas
 
